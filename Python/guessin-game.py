@@ -1,10 +1,12 @@
 import random
 
 number = random.randint(1,99)
+chance = 0
+correct = False
 
-guess = int(input('Enter an integer from 1 to 99:'))
-
-while number != 'guess':
+while !correct:
+    guess = int(input('Enter an integer from 1 to 99:'))
+    chance += 1
     if guess < number:
         print('guess is low')
         guess = int(input('Enter an integer from 1 to 99:'))
@@ -15,5 +17,7 @@ while number != 'guess':
         print("guess isn't a negative number")
         guess = int(input('Enter an integer from 1 to 99:'))
     else:
+        correct = True
         print('congratulations,you guessed it. the secret number is {}'.format(number))
+        print('And it took you {} guesses!'.format(chance))
         break
